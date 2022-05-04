@@ -1,0 +1,334 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.svg">
+    <link rel="stylesheet" href="figuras.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Figuras Geométricas | Curso Platzi </title>
+</head>
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <div class="logo-header">
+                <img src="img/logo.svg" alt="logo-abaco" class="img-logo">
+            </div>
+            <div class="titulos-header">
+                <h1 class="h1 h1-titulo">Bot de Matemáticas</h1>
+                <h2 class="h2">Resuelve tus problemas fácil e intuitivamente</h2>
+            </div>
+        </header>
+        <!-- <section class="seccion primera-seccion">
+        <div class="header">
+            <div class="logo-header">
+                <img src="img/logo.svg" alt="logo-abaco" class="img-logo">
+            </div>
+            <div class="titulos-header">
+                <h1 class="h1 h1-titulo">Bot de Matemáticas</h1>
+                <h2 class="h2">Resuelve tus problemas fácil e intuitivamente</h2>
+            </div>
+        </div>
+            <div class="division-de-seccion">
+                <div class="opciones-primera-seccion">
+                    <h4 class="h4 h4-primera-seccion">
+                        ¿Qué vamos a calcular hoy?
+                    </h4>
+                    <div class="botones-primera-seccion">
+                        <a href="#Geometria" class="boton boton-coral">Geometría</a>
+                        <a href="#Analisis" class="boton boton-naranja">Análisis</a>
+                        <a href="#Estadistica" class="boton boton-turquesa">Estadísticas</a>
+                        <a href="#Descuentos" class="boton boton-amarillo">Descuentos</a>
+                    </div>
+                </div>
+                <div class="robotina-presentacion">
+                    <img src="img/Robotina-hola-03.svg" alt="robotina-saludando" class="img-robotina-saludando">
+                    <p class="texto texto-presentacion">Soy Robotina, mucho gusto conocerte.<br><br>Me han programado para ayudarte con matemáticas</p>
+                </div>
+            </div>
+        </section> -->
+    
+        <section class="seccion segunda-seccion" id="Geometria">
+            
+            <div class="robotina-buscando">
+                <img src="img/Robotina-geometria-01.svg" alt="robotina-buscando" class="img-robotina">
+            </div>
+            <div class="opciones-geometria">
+                <h2 class="h1 h1-segunda-seccion">Geometría</h2>
+                <h3 class="h4 h4-segunda-seccion">Aprende a calcular Áreas y Perímetros de:</h3>
+                <div class="botones-segunda-seccion">
+                    <a href="#Cuadrado" class="boton boton-amarillo">Cuadrado</a>
+                    <a href="#Circulo" class="boton boton-turquesa">Círculo</a>
+                    <a href="#Triangulo" class="boton boton-coral">Triángulo</a>
+                    <a href="#Rectangulo" class="boton boton-naranja">Rectángulo</a>
+                </div>
+                
+            </div>
+        </section>
+    
+    
+    
+        <section class="seccion tercera-seccion" id="Cuadrado">
+            <div class="seccion-color seccion-cuadrado">
+                <div class="datos division-seccion-color">
+                    <div class="titulos-seccion-color">
+                        <h3 class="h5 h5-cuadrado">
+                            Cuadrado
+                        </h3>
+                        <p class="texto texto-seccion-color">¿Cuánto miden los lados de <br>tu <span class="span-texto">cuadrado</span>?</p>
+                    </div>
+                    <form action="">
+                        <div class="input-form input-form-cuadrado">
+                            <label for="InputCuadrado" class="label label-input label-input-cuadrado">Lado</label>
+                            <input id="InputCuadrado" type="number" class="input">
+                            <span class="input-span-unidad label-input label-span-cuadrado">cm</span>
+                        </div>
+                        <div class="boton-form">
+                            <button type="button" onclick="calcularPerimetroCuadrado()" class="boton boton-blanco boton-perimetro boton-perimetro-cuadrado">
+                                Perímetro
+                            </button>
+                            <button type="button" onclick="calcularAreaCuadrado()" class="boton boton-blanco boton-area boton-area-cuadrado">
+                                Área
+                            </button>
+                        </div> 
+                    </form>
+                </div>
+                <div class="recuerda division-seccion-color">
+                    <h4 class="h6">Recuerda</h4>
+                    <img src="img/cuadrado-con-leyenda.png" alt="cuadrado-con-leyenda" class="img-cuadrado">
+                </div>
+                <div class="resultado division-seccion-color">
+                    <h4 class="h6">Tu Resultado</h4>
+                    <div class="resultados-perimetro-area">
+                        <h3 class="h5-resultado" id="resultado-cuadrado-perimetro">
+                            <span class="h5-resultado" id="resultado-p-cuadrado-aqui">
+                            </span>
+                        </h3>
+                        <h3 class="h5-resultado" id="resultado-cuadrado-area">
+                            <span class="h5-resultado" id="resultado-a-cuadrado-aqui">
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="img-robotina robotina-logrado">
+                        <img src="img/Robotina-logrado-04.svg" alt="Robotina Logrado" class="img-robotina-logrado">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="seccion cuarta-seccion" id="Triangulo">
+            <div class="seccion-color seccion-triangulo">
+                <div class="datos division-seccion-color">
+                    <div class="titulos-seccion-color">
+                        <h3 class="h5 h5-triangulo">
+                            Triángulo
+                        </h3>
+                        <p class="texto texto-seccion-color">¿Cuánto miden los lados y la<br>altura de tu <span class="span-texto">triángulo</span>?</p>
+                    </div>
+                    <form action="">
+                        <div class="input-form input-form-triangulo">
+                            <div class="input-1-2-triangulo">
+                                <div class="input-1-triangulo">
+                                    <label for="InputTrianguloLado1" class="label label-input label-input-triangulo">
+                                        Lado 1
+                                    </label>
+                                    <input id="InputTrianguloLado1" type="number" class="input">
+                                    <span class="input-span-unidad label-input label-span-triangulo">cm</span>
+                                </div>
+                                <div class="input-2-triangulo">
+                                    <label for="InputTrianguloLado2" class="label label-input label-input-triangulo">
+                                        Lado 2
+                                    </label>
+                                    <input id="InputTrianguloLado2" type="number" class="input">
+                                    <span class="input-span-unidad label-input label-span-triangulo">cm</span>
+                                </div>
+                            </div>
+                            <div class="input-3-4-triangulo">
+                                <div class="input-3-triangulo">
+                                    <label for="InputTrianguloBase" class="label label-input label-input-triangulo">
+                                        Base
+                                    </label>
+                                    <input id="InputTrianguloBase" type="number" class="input">
+                                    <span class="input-span-unidad label-input label-span-triangulo">cm</span>
+                                </div>
+                                <div class="input-4-triangulo">
+                                    <label for="InputTrianguloAltura" class="label label-input label-input-triangulo">
+                                        Altura
+                                    </label>
+                                    <input id="InputTrianguloAltura" type="number" class="input">
+                                    <span class="input-span-unidad label-input label-span-triangulo">cm</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="boton-form">
+                            <button type="button" onclick="calcularPerimetroTriangulo()" class="boton boton-blanco boton-perimetro boton-perimetro-triangulo">
+                                Perímetro
+                            </button>
+                            <button type="button" onclick="calcularAreaTriangulo()" class="boton boton-blanco boton-area boton-area-triangulo">
+                                Área
+                            </button>
+                            <button type="button" onclick="calcularAlturaIsosceles()" class="boton boton-blanco boton-altura boton-altura-triangulo">
+                                Altura de tu Isósceles
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="recuerda division-seccion-color">
+                    <h4 class="h6">Recuerda</h4>
+                    <img src="img/triangulo-con-leyenda.png" alt="triangulo-con-leyenda" class="img-triangulo">
+                </div>
+                <div class="resultado division-seccion-color">
+                    <h4 class="h6">Tu Resultado</h4>
+                    <div class="resultados-perimetro-area">
+                        <h3 class="h5-resultado" id="resultado-triangulo-perimetro">
+                            <span class="h5-resultado" id="resultado-p-triangulo-aqui"></span>
+                        </h3>
+                        <h3 class="h5-resultado" id="resultado-triangulo-area">
+                            <span class="h5-resultado" id="resultado-a-triangulo-aqui"></span>
+                        </h3>
+                        <h3 class="h5-resultado" id="resultado-triangulo-altura">
+                            <span class="h5-resultado" id="resultado-h-triangulo-aqui"></span>
+                        </h3>
+                    </div>
+                    <div class="img-robotina robotina-logrado">
+                        <img src="img/Robotina-logrado-04.svg" alt="Robotina Logrado" class="img-robotina-logrado">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="seccion quinta-seccion" id="Circulo">
+            <div class="seccion-color seccion-circulo">
+                <div class="datos division-seccion-color">
+                    <div class="titulos-seccion-color">
+                        <h3 class="h5 h5-circulo">
+                            Círculo
+                        </h3>
+                        <p class="texto texto-seccion-color">¿Cuánto mide el radio de tu<br><span class="span-texto">círculo</span>?</p>
+                    </div>
+                    <form action="">
+                        <div class="input-form input-form-circulo">
+                            <label for="InputCirculoRadio" class="label label-input label-input-circulo">
+                                Radio
+                            </label>
+                            <input id="InputCirculoRadio" type="number" class="input">
+                            <span class="input-span-unidad label-input label-span-circulo">cm</span>
+                        </div>
+                        <div class="boton-form">
+                            <button type="button" onclick="calcularPerimetroCirculo()" class="boton boton-blanco boton-perimetro boton-perimetro-circulo">
+                                Perímetro
+                            </button>
+                            <button type="button" onclick="calcularAreaCirculo()" class="boton boton-blanco boton-area boton-area-circulo">
+                                Área
+                            </button>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="recuerda division-seccion-color">
+                    <h4 class="h6">Recuerda</h4>
+                    <img src="img/circulo-con-leyenda.png" alt="circulo-con-leyenda" class="img-circulo">
+                </div>
+                <div class="resultado division-seccion-color">
+                    <h4 class="h6">Tu Resultado</h4>
+                    <div class="resultados-perimetro-area">
+                        <h3 class="h5-resultado" id="resultado-circulo-perimetro">
+                            <span class="h5-resultado" id="resultado-p-circulo-aqui">
+                            </span>
+                        </h3>
+                        <h3 class="h5-resultado" id="resultado-circulo-area">
+                            <span class="h5-resultado" id="resultado-a-circulo-aqui">
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="img-robotina robotina-logrado">
+                        <img src="img/Robotina-logrado-04.svg" alt="Robotina Logrado" class="img-robotina-logrado">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="seccion sexta-seccion" id="Rectangulo">
+            <div class="seccion-color seccion-rectangulo">
+                <div class="datos division-seccion-color">
+                    <div class="titulos-seccion-color">
+                        <h3 class="h5 h5-rectangulo">
+                            Rectángulo
+                        </h3>
+                        <p class="texto texto-seccion-color">¿Cuánto miden los lados de<br>tu <span class="span-texto">rectángulo</span>?</p>
+                    </div>
+                    <form action="">
+                        <div class="input-form input-form-rectangulo">
+                            <div class="input-1-rectangulo">
+                                <label for="InputRectanguloLado1" class="label label-input label-input-rectangulo">
+                                    Lado 1
+                                </label>
+                                <input id="InputRectanguloLado1" type="number" class="input">
+                                <span class="input-span-unidad label-input label-span-rectangulo">cm</span>
+                            </div>
+                            
+                            <div class="input-2-rectangulo">
+                                <label for="InputRectanguloLado2" class="label label-input label-input-rectangulo">
+                                    Lado 2
+                                </label>
+                                <input id="InputRectanguloLado2" type="number" class="input">
+                                <span class="input-span-unidad label-input label-span-rectangulo">cm</span>
+                            </div>
+                        </div>
+                        
+                        <div class="boton-form">
+                            <button type="button" onclick="calcularPerimetroRectangulo()" class="boton boton-blanco boton-perimetro boton-perimetro-rectangulo">
+                                Perímetro
+                            </button>
+                            <button type="button" onclick="calcularAreaRectangulo()" class="boton boton-blanco boton-area boton-area-rectangulo">
+                                Área
+                            </button>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="recuerda division-seccion-color">
+                    <h4 class="h6">Recuerda</h4>
+                    <img src="img/rectangulo-con-leyenda.png" alt="rectangulo-con-leyenda" class="img-rectangulo">
+                </div>
+                <div class="resultado division-seccion-color">
+                    <h4 class="h6">Tu Resultado</h4>
+                    <div class="resultados-perimetro-area">
+                        <h3 class="h5-resultado" id="resultado-rectangulo-perimetro">
+                            <span class="h5-resultado" id="resultado-p-rectangulo-aqui">
+                            </span>
+                        </h3>
+                        <h3 class="h5-resultado" id="resultado-rectangulo-area">
+                            <span class="h5-resultado" id="resultado-a-rectangulo-aqui">
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="img-robotina robotina-logrado">
+                        <img src="img/Robotina-logrado-04.svg" alt="Robotina Logrado" class="img-robotina-logrado">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p class="texto-pequeño">
+            Diseñado por Eva Villafañe
+        </p>
+    </footer>
+    
+    
+    <script src="figuras.js"></script>
+</body>
+</html>

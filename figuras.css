@@ -1,0 +1,582 @@
+/*NOTAS
+mejora posicionamiento de los input!!!*/
+
+/* Estilos Generales */
+/* Declaración de tipografías */
+@font-face {
+    font-family: 'LEMON MILK';
+    src: url(fonts/LEMONMILK-Regular.otf);
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'LEMON MILK';
+    src: url(fonts/LEMONMILK-Medium.otf);
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'LEMON MILK';
+    src: url(fonts/LEMONMILK-Bold.otf);
+    font-style: normal;
+    font-weight: 800;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'LEMON MILK', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Colores y tamaños de headings y textos */
+:root{
+    --turquesa-oscuro: #008A79;
+    --turquesa-claro: #41E3D0;
+    --coral: #FF5C5C;
+    --amarillo-huevo: #FFBF37;
+    --naranja-intenso: #F05403;
+    --rojo-escarlata: #F00D01;
+    --negro: #000000;
+    --blanco: #ffffff;
+    --blanco-hueso-light: #FFFBF3;
+    --h1: 3.5rem;
+    --h2: 1.5rem;
+    --h3: 1.5rem;
+    --h4: 1.125rem;
+    --texto: 1rem;
+    --texto-pequeño: 0.75rem;
+    --label-input:1.125rem;
+}
+
+/* Headings */
+.h1{
+    font-size: var(--h1);
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-bottom: 16px;
+}
+
+.h2{
+    font-size: var(--h2);
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--coral);
+}
+
+.h3{
+    font-size: var(--h3);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--coral);
+}
+
+.h4{
+    font-size: var(--h4);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--naranja-intenso);
+}
+
+.h5{
+    font-size: var(--h3);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--blanco);
+    padding-bottom: 16px;
+}
+
+.h5-resultado{
+    font-size: var(--h5);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--blanco);
+}
+
+.h6{
+    font-size: var(--h4);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--blanco);
+    padding-top: 52px;
+    text-align: center;
+}
+
+.texto{
+    font-size: var(--texto);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 2px;
+}
+
+.span-texto{
+    font-size: var(--texto);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--blanco);
+}
+
+.texto-pequeño{
+    font-size: var(--texto-pequeño);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    color: var(--blanco);
+    opacity: 75%;
+    z-index: 997;
+}
+
+.label-input{
+    font-size: var(--label-input);
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 8px;
+    color: var(--blanco);
+}
+
+.boton{
+    font-size: var(--texto);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    color: var(--negro);
+}
+
+/* Botones */
+
+.boton{
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+}
+
+.boton-coral{
+    background-color: var(--coral);
+}
+
+.boton-naranja{
+    background-color: var(--naranja-intenso);
+}
+
+.boton-turquesa{
+    background-color: var(--turquesa-claro);
+}
+
+.boton-amarillo{
+    background-color: var(--amarillo-huevo);
+}
+
+.boton-blanco{
+    background-color: var(--blanco);
+}
+
+.boton-perimetro-cuadrado, .boton-area-cuadrado{
+    color: var(--amarillo-huevo)
+}
+
+.boton-perimetro-triangulo, .boton-area-triangulo, .boton-altura-triangulo{
+    color: var(--coral)
+}
+
+.boton-perimetro-circulo, .boton-area-circulo{
+    color: var(--turquesa-claro);
+}
+
+.boton-perimetro-rectangulo, .boton-area-rectangulo{
+    color: var(--naranja-intenso);
+}
+
+/* Form */
+
+.input {
+    background: #0000007c;
+    border: 2px solid var(--negro);
+    box-sizing: border-box;
+    border-radius: 50px;
+    width: 112px;
+    height: 40px;
+    position: relative;
+    padding-left: 16px;
+    color: var(--blanco);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+/* Input Cuadrado */
+
+.input-form-cuadrado{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 92px;
+}
+
+.label-input-cuadrado{
+    margin-bottom: -10px;
+    z-index: 999;
+}
+
+.label-span-cuadrado{
+    margin-left: 64px;
+    margin-top: -30px;
+    z-index: 998;
+}
+
+/* Input Triángulo */
+
+.input-form-triangulo{
+    padding-bottom: 30px;
+}
+
+.input-1-triangulo, .input-2-triangulo, .input-3-triangulo, .input-4-triangulo{
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+}
+
+.input-1-2-triangulo, .input-3-4-triangulo{
+    display: flex;
+    flex-direction: row;
+}
+
+.input-1-2-triangulo{
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+
+.label-input-triangulo{
+    margin-bottom: -10px;
+    z-index: 999;
+}
+
+.label-span-triangulo{
+    margin-left: 64px;
+    margin-top: -30px;
+    z-index: 998;
+}
+
+/* Input Círculo */
+
+.input-form-circulo{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 92px;
+}
+
+.label-input-circulo{
+    margin-bottom: -10px;
+    z-index: 999;
+}
+
+.label-span-circulo{
+    margin-left: 64px;
+    margin-top: -30px;
+    z-index: 998;
+}
+
+/* Input Rectangulo */
+
+.input-form-rectangulo{
+    display: flex;
+    padding-bottom: 92px;
+}
+
+.input-1-rectangulo, .input-2-rectangulo{
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+}
+
+.label-input-rectangulo{
+    margin-bottom: -10px;
+    z-index: 999;
+}
+
+.label-span-rectangulo{
+    margin-left: 64px;
+    margin-top: -30px;
+    z-index: 998;
+}
+
+
+/* Secciones en general */
+
+.seccion{
+    padding: 80px 120px;
+    box-sizing: border-box;
+    background-color: var(--blanco-hueso-light);
+}
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion-color{
+    border-radius: 40px;
+    padding: 40px;
+    width: 880px;
+    height: 352px;
+    display: flex;
+    gap: 40px;
+}
+
+.texto-seccion-color{
+    color: var(--blanco);
+}
+
+.division-seccion-color{
+    width: 267px;
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--blanco-hueso-light);
+    padding: 80px 120px;
+}
+/* Primera Sección */
+
+.header{
+    display: flex;
+    gap: 48px;
+    padding-bottom: 16px;
+}
+
+.logo-header{
+    width:120px;
+    height: 129px;
+}
+
+.img-logo{
+    width: 120px;
+}
+
+.titulos-header{
+    width: 790px;
+    height: 129px;
+}
+
+.h1-titulo{
+    color: var(--amarillo-huevo);
+}
+
+.division-de-seccion{
+    width: 960px;
+    height: 286px;
+    display: flex;
+}
+
+.opciones-primera-seccion{
+    width: 480px;
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.h4-primera-seccion{
+    padding-bottom: 44px;
+}
+
+.botones-primera-seccion{
+    width: 352px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.robotina-presentacion{
+    width: 480px;
+    height: 304px;
+    position: relative;
+}
+
+.img-robotina-saludando{
+    width: 350px;
+}
+
+.texto-presentacion{
+    width: 240px;
+    color: var(--turquesa-oscuro);
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+}
+
+/* Segunda Sección - GEOMETRÍA */
+
+.segunda-seccion{
+    display: flex;
+    justify-content: space-between;
+}
+
+.robotina-buscando{
+    width: 480px;
+    height: 432px;
+}
+
+.img-robotina{
+    width: 356px;
+}
+
+.opciones-geometria{
+    width: 480px;
+    height: 432px;
+    padding-left: 16px;
+}
+
+.h1-segunda-seccion{
+    width: 415px;
+    color: var(--naranja-intenso);
+}
+
+.h4-segunda-seccion{
+    padding-bottom: 40px;
+}
+
+.botones-segunda-seccion{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tercera Sección - CUADRADO */
+
+.seccion-cuadrado{
+    background-color: #FFBF37;
+}
+
+/* Datos */
+
+.datos{
+    justify-content: space-between;
+}
+
+.h5-cuadrado{
+    text-shadow: 2px 2px 0px var(--negro);
+}
+
+/* Recuerda */
+
+.recuerda{
+    align-items: center;
+}
+
+.img-cuadrado{
+    width: 116px;
+    height: 190px;
+    padding-top: 4px;
+}
+
+/* Resultado */
+
+.resultado{
+    justify-content: space-between;
+}
+
+.img-robotina-logrado{
+    width: 267px;
+    height: 172px;
+    margin-bottom: -50px;
+}
+
+.resultados-perimetro-area{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Cuarta Sección - TRIÁNGULO */
+
+.seccion-triangulo{
+    background-color: var(--coral);
+}
+
+/* Datos */
+
+.h5-triangulo{
+    text-shadow: 2px 2px 0px var(--negro);
+}
+
+.boton-altura-triangulo{
+    margin-top: 8px;
+}
+
+/* Recuerda */
+
+.img-triangulo{
+    padding-top: 32px;
+}
+
+/*Resultado */
+
+#resultado-triangulo-altura{
+    margin: 16px auto 0 auto;
+}
+
+/* Quinta Sección - CÍRCULO */
+
+.seccion-circulo{
+    background-color: var(--turquesa-oscuro);
+}
+
+/* Datos */
+
+.h5-circulo{
+    text-shadow: 2px 2px 0px var(--negro);
+}
+
+/* Recuerda */
+
+.img-circulo{
+    padding-top: 24px;
+    padding-left: 44px;
+}
+
+
+/* Sexta Sección - RECTÁNGULO */
+
+.seccion-rectangulo{
+    background-color: var(--naranja-intenso);
+}
+
+/* Datos */
+
+.h5-rectangulo{
+    text-shadow: 2px 2px 0px var(--negro);
+}
+
+/* Recuerda */
+
+.img-rectangulo{
+    padding-top: 40px;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 40px;
+    background-color: var(--turquesa-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
